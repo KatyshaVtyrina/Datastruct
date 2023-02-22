@@ -21,3 +21,9 @@ class Stack:
         new_node = Node(data)
         new_node.next_node = self.top
         self.top = new_node
+
+    def pop(self):
+        """Удаляет из стека верхний элемент (последний добавленный)"""
+        pop_element = self.top
+        self.top = self.top.next_node
+        return pop_element.data
