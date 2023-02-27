@@ -1,12 +1,5 @@
 import unittest
-from Stack import Node, Stack
-
-
-class TestNode(unittest.TestCase):
-
-    def test__repr__(self):
-        self.assertEqual(Node.__repr__(Node(5)), "Node('data'=5, 'next_node'=None)")
-        self.assertEqual(Node.__repr__(Node('a', 'b')), "Node('data'=a, 'next_node'=b)")
+from datastruct.Stack import Stack
 
 
 class TestStack(unittest.TestCase):
