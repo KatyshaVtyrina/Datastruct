@@ -23,6 +23,7 @@ class TestQueue(unittest.TestCase):
         self.assertEqual(q.tail.next_node, None)
 
     def test_dequeue(self):
+        """Ожидается удаление первого элемента из очереди"""
         q = Queue()
         q.enqueue('data1')
         q.enqueue('data2')
