@@ -6,10 +6,12 @@ from datastruct.custom_queue import Queue
 class TestQueue(unittest.TestCase):
 
     def test_repr_(self):
+        """Ожидается инициализация очереди"""
         self.assertEqual(Queue.__repr__(Queue()), "Queue('head'=None, 'tail'=None)")
         self.assertEqual(Queue.__repr__(Queue(5, 10)), "Queue('head'=5, 'tail'=10)")
 
     def test_enqueue(self):
+        """Ожидается добавление элемента в конец очереди"""
         q = Queue()
         q.enqueue('data1')
         q.enqueue('data2')
