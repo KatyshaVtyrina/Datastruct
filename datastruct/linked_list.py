@@ -73,8 +73,11 @@ class LinkedList:
     def get_data_by_id(self, value):
         """Возвращает первый найденный в LinkedList словарь с ключом id,
         значение которого равно переданному в метод значению"""
-        ll_list = self.to_list()
-        for item in ll_list:
-            if item['id'] == value:
-                return item
-        return None
+        try:
+            ll_list = self.to_list()
+            for item in ll_list:
+                if item['id'] == value:
+                    return item
+            raise ValueError
+        except ValueError:
+            return None
